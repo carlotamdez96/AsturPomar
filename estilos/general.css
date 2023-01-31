@@ -1,0 +1,21 @@
+.menu{
+    background-color: rgba(56, 64, 1, 0);/*Desde js dismunuir transp cuando se haga scroll*/
+    color: var( --color-naranja);
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.menu__logo{
+    height: 40px;
+}
+
+.cuerpo{
+    background-color: var(--color-verdeOscuro);
+}

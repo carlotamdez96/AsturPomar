@@ -41,14 +41,24 @@
     /* height: 100vh; */
 }
 .servicios__imagenes{
-    height: 250px;
+    /* height: 250px; */
     width: 33.33%;
 }
 
-.servicios__contenedor{
+.servicios__tarjeta{
+    width:33.33%;
+    /* height: 250px; */
+    background-color: aliceblue;
+    position: relative;
+
+}
+.tarjeta__back{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
     flex-basis: 150px;
     flex-grow: 2;
-    width:33.33%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,9 +66,28 @@
     padding-left: 50px;
     padding-right: 50px;
     gap: 20px;
-    height: 250px;
-    background-color: aliceblue;
-    
+}
+.tarjeta__front{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+     background-color: red;
+     flex-basis: 150px;
+    flex-grow: 2;
+    /* width:33.33%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 20px;
+}
+.servicios__tarjeta:hover .tarjeta__back{
+    transform: perspective(600px) rotateY(0deg);
+}
 
+.servicios__tarjeta:hover .tarjeta__front{
+    transform: perspective(600px) rotateY(-180deg);
 }
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <style>
+        body{
+            background-image: url("imagenes/cuencoManzanas.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .contenedor{
+            width: 35%;
+            height: 30%;
+            background-color:#72811a6b;
+            backdrop-filter: blur(10px);
+        }
+        .contenedor__cuestionario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            
+        }
+        .contenedor__titulo{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="contenedor__titulo">Inicia Sesión</h1>
+        <div class="contenedor__cuestionario">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="user" required><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña"   required>
+            <input type="submit" value="Enviar">
+        </div>
+        
+    </div>
+</body>
+</html>

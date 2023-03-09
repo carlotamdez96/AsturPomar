@@ -26,12 +26,29 @@
 }
 .seccion__servicios{
     background-color: var(--color-verdeOscuro);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas: 
+    "imagen1 tarjeta1 tarjeta2"
+    "imagen2 tarjeta3 tarjeta3"
+    ;
     width: 100%;
     height: 100vh;
     
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.tarjeta1{
+    grid-area: tarjeta1;
+}
+.tarjeta2{
+    grid-area: tarjeta2;
+}
+.tarjeta3{
+    grid-area: tarjeta3;
 }
 .servicios__cuadrados{
     display: flex;

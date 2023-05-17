@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+Pro&display=swap');
+
 .encabezado{
     background-image: url(../imagenes/portada.jpg);
     background-repeat: no-repeat;
@@ -26,33 +28,70 @@
 }
 .seccion__servicios{
     background-color: var(--color-verdeOscuro);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh;
-    
-}
-.servicios__cuadrados{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "manzanos t1 miel"
+    "t3 mandil t4"
+    ;
     width: 100%;
     /* height: 100vh; */
+    
 }
+.miel{
+    grid-area: miel;
+}
+.manzanos{
+    grid-area: manzanos;
+}
+.t1{
+    grid-area: t1;
+}
+.t2{
+    grid-area: t2;
+}
+.t3{
+    grid-area: t3;
+}
+.t4{
+    grid-area: t4;
+}
+.mandil{
+    grid-area: mandil;
+}
+
 .servicios__imagenes{
     /* height: 250px; */
-    width: 33.33%;
+    width: 100%;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    /* margin: 20px; */
+    gap: 30px;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor__h3{
+    font-size: 1.5em;
+    color: var(--color-naranja);
+    font-family: var(--texto-titulo);
+    align-items: center;
+}
+.contenedor__parrafo{
+    font-size: 1.1em;
+    /* color: var(--color-verdeCentral); */
+    text-align: justify;
+    font-family: var(--texto-general);
 }
 
-.servicios__tarjeta{
-    width:33.33%;
-    /* height: 250px; */
-    background-color: aliceblue;
-    position: relative;
 
-}
-.tarjeta__back{
+/* .tarjeta__back{
     position: absolute;
     transform: perspective(600px) rotateY(180deg);
     backface-visibility: hidden;
@@ -75,19 +114,19 @@
      flex-basis: 150px;
     flex-grow: 2;
     /* width:33.33%; */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
     gap: 20px;
-}
-.servicios__tarjeta:hover .tarjeta__back{
+} */
+/* .servicios__tarjeta:hover .tarjeta__back{
     transform: perspective(600px) rotateY(0deg);
 }
 
 .servicios__tarjeta:hover .tarjeta__front{
     transform: perspective(600px) rotateY(-180deg);
-}
+} */ 
 

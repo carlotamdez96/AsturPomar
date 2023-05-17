@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <script src="https://kit.fontawesome.com/daec488c78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos/reset.css">
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/administrador.css">
+</head>
+<body>
+    <nav class="menu">
+        <img class="menu__imagen" src="./imagenes/imagen.png" alt="logo">
+        <h2 class="menu__titulo">Asturpomar</h2>
+        <a class="menu__enlace" href="">Cerrar Sesión</a>
+
+    </nav>
+    <article class="cuerpo">
+        <section class="navegacion">
+            <ul class="navegacion__lista">
+                <li class="lista__elemento"><a href="">Informes</a></li>
+                <li class="lista__elemento"><a href="">Usuarios</a></li>
+                <li class="lista__elemento"><a href="/fincas/mostrar">Fincas</a></li>
+                <li class="lista__elemento"><a href="">Fotografias</a></li>
+                <li class="lista__elemento"><a href="">Arboles</a></li>
+                <li class="lista__elemento"><a href="/recolecciones/mostrar">Recoleccion</a></li>
+                <li class="lista__elemento"><a href="">Reposicion</a></li>
+                <li class="lista__elemento"><a href="/tratamientos/mostrar">Tratamientos</a></li>
+                <li class="lista__elemento"><a href="/variedades/mostrar">Variedades</a></li>
+            </ul>
+        </section>
+        <section class="tabla">
+            <table  >
+                <thead>
+                    <tr>
+                        <th style="border: 2px #000000 solid">Nombre</th>
+                        <th style="border: 2px #000000 solid">Direccion</th>
+                        <th style="border: 2px #000000 solid">Patron</th>
+                        <th style="border: 2px #000000 solid">Referencia</th>
+                        <th style="border: 2px #000000 solid">Superficie</th>
+                        <th style="border: 2px #000000 solid">Año plantacion</th>
+                        <th style="border: 2px #000000 solid">Años</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="finca: ${fincas}">
+                        <td style="border: 2px #000000 solid">
+                        <td style="border: 2px #000000 solid" >
+                        <td style="border: 2px #000000 solid" >
+                        <td style="border: 2px #000000 solid" >
+                        <td style="border: 2px #000000 solid" >
+                        <td style="border: 2px #000000 solid">
+                        <td style="border: 2px #000000 solid">
+                        <td ><a th:href=""><i class="fa-solid fa-delete-left"></i></a></td>
+                    <td><a th:href=""><i class="fa-solid fa-pen-to-square"></i></a></td> 
+                    </tr>
+                <tbody>
+                </table>
+                <a href="/fincas/forminsertar">Insertar</a>
+                </section>
+        </section>
+       
+    </article>
+    
+
+    
+</body>
+</html>

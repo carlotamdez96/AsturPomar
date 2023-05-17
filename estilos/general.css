@@ -1,5 +1,5 @@
 .menu{
-    background-color: rgba(56, 64, 1, 0);/*Desde js dismunuir transp cuando se haga scroll*/
+    background-color: rgba(56, 64, 1, 0.521);/*Desde js dismunuir transp cuando se haga scroll*/
     color: var( --color-naranja);
     height: 8vh;
     width: 100%;
@@ -14,6 +14,15 @@
 }
 .menu__logo{
     height: 40px;
+}
+.menu__sesion{
+    cursor: pointer;
+    font-size: 1.3em;
+    font-family: var(--texto-general);
+}
+.menu__sesion:hover{
+    color: var(--color-rojo);
+    text-decoration:underline;
 }
 
 .cuerpo{
